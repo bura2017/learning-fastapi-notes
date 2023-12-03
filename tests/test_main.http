@@ -1,0 +1,92 @@
+# Test your FastAPI endpoints
+
+### 1
+
+GET http://127.0.0.1:8000/
+Accept: application/json
+
+### 2
+
+GET http://127.0.0.1:8000/hello/User
+Accept: application/json
+
+### 3
+
+POST http://127.0.0.1:8000/calculate/0
+Content-Type: application/json
+
+{
+  "num1": 5,
+  "num2": 10
+}
+
+### 4
+
+GET http://127.0.0.1:8000/users
+Accept: application/json
+
+### 5
+
+GET http://127.0.0.1:8000/items?q=fixedquery&q=somequery&q=thirdquery
+Accept: application/json
+
+### 6
+
+GET http://127.0.0.1:8000/users/1?is_admin=yes&extra_query=kuk
+Accept: application/json
+Cookie: session_token=:)
+
+### 7
+
+POST http://127.0.0.1:8000/users
+Content-Type: application/json
+Authorization: Basic user pass
+
+{
+    "name": "Alice",
+    "email": "alice@example.com",
+    "age": 30,
+    "is_subscribed": true
+}
+
+### 8
+
+POST http://127.0.0.1:8000/items
+Content-Type: application/json
+
+{
+  "name": "http_exc",
+  "price": -1
+}
+
+### 9
+
+POST http://127.0.0.1:8000/items
+Content-Type: application/json
+
+{
+  "name": "custom_exc",
+  "price": 0
+}
+
+### 10
+
+POST http://127.0.0.1:8000/items
+Content-Type: application/json
+
+{
+  "name": "cheap_exc",
+  "price": -2
+}
+
+### 11
+
+POST http://127.0.0.1:8000/items
+Content-Type: application/json
+
+{
+  "name": "no errors",
+  "price": 10
+}
+
+###

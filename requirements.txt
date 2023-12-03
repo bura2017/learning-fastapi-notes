@@ -1,0 +1,13 @@
+fastapi
+pyyaml
+python-jose # for jwt
+python-multipart # forgotten why
+email-validator # only for import from pydantic EmailStr
+fastapi-localization #is not used but interesting
+
+# For tests
+pytest
+pytest-asyncio
+
+# For locust tests
+locust
